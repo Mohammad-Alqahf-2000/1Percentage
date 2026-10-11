@@ -13,7 +13,7 @@ export default function LanguageToggle() {
       <Button
         onClick={toggleLanguage}
         variant="outlined"
-        sx={{ gap: 1, width: "fit-content" }}
+        sx={{ gap: 1, width: "fit-content", minWidth: "fit-content" }}
       >
         <LanguageIcon />
         {language === "en" ? "العربية" : "English"}

@@ -9,13 +9,13 @@ import { Box, Stack, IconButton } from "@mui/material";
 
 // Material UI
 import PushPinIcon from "@mui/icons-material/PushPin";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 
 // My Imports
 import Sidebar from "../components/Sidebar";
-// import Header from "../components/Header";
-import ThemeToggle from "../components/ThemeToggle";
-import LanguageToggle from "../components/LanguageToggle";
+import Header from "../components/Header";
+// import ThemeToggle from "../components/ThemeToggle";
+// import LanguageToggle from "../components/LanguageToggle";
 import { useColorMode, useLanguage } from "../contexts/AppUIContext";
 
 export default function RootLayout() {
@@ -140,14 +140,10 @@ export default function RootLayout() {
           transition: "margin 0.3s ease",
           paddingY: "0.5rem",
           paddingX: "0.5rem",
+          overflow: "auto",
         }}
       >
-        {/* <Header>
-          <IconButton onClick={toggleHideShowSidebar}>
-            <MenuIcon />
-          </IconButton>
-        </Header> */}
-        <IconButton
+        {/* <IconButton
           onClick={toggleHideShowSidebar}
           sx={{
             position: "fixed",
@@ -155,27 +151,13 @@ export default function RootLayout() {
             backgroundColor: "primary.main",
             color: "primary.contrastText",
             m: "1rem",
-            mt: "2rem",
+            // mt: "2rem",
             ":hover": { backgroundColor: "background.mainColor" },
           }}
         >
           <MenuIcon />
-        </IconButton>
-        <Stack
-          sx={{
-            width: "100%",
-            height: "fit-content",
-            paddingTop: 0.5,
-            gap: 3,
-            paddingX: 4,
-            justifyContent: { xs: "center", md: "flex-end" },
-          }}
-          direction="row"
-        >
-          <LanguageToggle />
-          <ThemeToggle />
-        </Stack>
-
+        </IconButton> */}
+        <Header toggleHideShowSidebar={toggleHideShowSidebar} />
         <Outlet />
       </Box>
     </Box>
